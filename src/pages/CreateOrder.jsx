@@ -23,10 +23,10 @@ export const CreateOrder = () => {
 			</NavLink>
 
 			<DropdownMenu>
-				<DropdownMenuTrigger>
-					<Button as="span" className="min-w-3xs">
-						{position}
-					</Button>
+				<DropdownMenuTrigger asChild>
+					<div>
+						<Button className="min-w-3xs">{position}</Button>
+					</div>
 				</DropdownMenuTrigger>
 				<DropdownMenuContent className="w-56">
 					<DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
