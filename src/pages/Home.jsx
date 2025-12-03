@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export const Home = () => {
 	return (
-		<div className="flex flex-col gap-4 h-full justify-center items-center bg-warning bg-white">
+		<div className="flex flex-col gap-4 h-full justify-center items-center bg-warning">
 			<NavLink to="/order">
 				<Button>Create Order</Button>
 			</NavLink>

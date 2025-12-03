@@ -5,10 +5,10 @@ import { Archive } from "./pages/Archive";
 
 function App() {
 	return (
-		<div className="container flex-grow-1">
+		<div className="container max-w-[1280px] mx-auto flex-grow-1 py-8">
 			<Routes>
-				<Route path="/order" element={<CreateOrder />} />
 				<Route path="/" element={<Home />} />
+				<Route path="/order" element={<CreateOrder />} />
 				<Route path="/archive" element={<Archive />} />
 			</Routes>
 		</div>
