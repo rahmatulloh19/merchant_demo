@@ -1,21 +1,15 @@
-import { NavLink, Route, Routes } from "react-router-dom";
-import { Button } from "./components/ui/button";
+import { Route, Routes } from "react-router-dom";
+import { CreateOrder } from "./pages/CreateOrder";
+import { Home } from "./pages/Home";
+import { Archive } from "./pages/Archive";
 
 function App() {
 	return (
 		<div className="container flex-grow-1">
-			<div className="flex flex-col gap-4 h-full justify-center items-center bg-warning bg-white">
-				<NavLink to="/order">
-					<Button>Create Order</Button>
-				</NavLink>
-				<NavLink to="/archive">
-					<Button>Archive</Button>
-				</NavLink>
-			</div>
-
 			<Routes>
-				<Route path="/order" />
-				<Route path="/archive" />
+				<Route path="/order" element={<CreateOrder />} />
+				<Route path="/" element={<Home />} />
+				<Route path="/archive" element={<Archive />} />
 			</Routes>
 		</div>
 	);
