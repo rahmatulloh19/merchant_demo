@@ -114,7 +114,65 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Mobile first */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Arial", sans-serif;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Sticky footer */
+
+.site-main {
+  flex-grow: 1;
+}
+
+/* Site header styles begin */
+
+/* Site header styles end */
+
+/* Site main begin */
+/* Hero styles started */
+
+/* Hero styles finished */
+/* Site main end */
+
+/* Site footer begin */
+
+/* Site footer end */
+
+/* Retina background images */
