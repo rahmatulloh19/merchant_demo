@@ -146,6 +146,7 @@ img {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  background-color: #364153;
 }
 
 .container {
