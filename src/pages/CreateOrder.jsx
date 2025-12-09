@@ -14,6 +14,12 @@ import { NavLink } from "react-router-dom";
 export const CreateOrder = () => {
 	const [position, setPosition] = React.useState("Open");
 
+	const upperCaseFunction = (value) => {
+		const upperCaseFirstCharacter = value.at(0).toUpperCase() + value.slice(1);
+
+		setPosition(upperCaseFirstCharacter);
+	};
+
 	return (
 		<div className="max-w-5xl mx-auto flex justify-between w-full">
 			<NavLink to="/">
@@ -29,7 +35,7 @@ export const CreateOrder = () => {
 					</div>
 				</DropdownMenuTrigger>
 				<DropdownMenuContent className="w-56">
-					<DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+					<DropdownMenuRadioGroup value={position} onValueChange={upperCaseFunction}>
 						<DropdownMenuRadioItem value="Top">Top</DropdownMenuRadioItem>
 						<DropdownMenuRadioItem value="Bottom">Bottom</DropdownMenuRadioItem>
 						<DropdownMenuRadioItem value="Right">Right</DropdownMenuRadioItem>
